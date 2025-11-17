@@ -1,0 +1,44 @@
+body {
+    height: 600px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#marca {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin-top: 10%;
+    opacity: 0.9;
+}
+
+#botao {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#botao button {
+    padding: 10px 20px;
+    font-family: "Amaranth", serif;
+    font-size: 20px;
+    text-align: center;
+    background-color: rgba(123, 202, 238, 0.616);
+    border: solid rgba(22, 53, 122, 0.678) 2px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#botao button:hover{
+    color: rgb(255, 255, 255);
+    transition: color 0.3s ease;
+    cursor: pointer;
+}

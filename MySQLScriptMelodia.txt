@@ -1,0 +1,40 @@
+
+CREATE SCHEMA IF NOT EXISTS `bdmelodia` DEFAULT CHARACTER SET utf8 ;
+USE `bdmelodia` ;
+
+CREATE TABLE IF NOT EXISTS `bdmelodia`.`aluno` (
+  `pkid_aluno` INT NOT NULL AUTO_INCREMENT,
+  `aluno_nome` VARCHAR(255) NOT NULL,
+  `aluno_data_de_nascimento` VARCHAR(12) NOT NULL,
+  `aluno_telefone` VARCHAR(45) NOT NULL,
+  `aluno_cpf` VARCHAR(13) NOT NULL,
+  `aluno_cep` VARCHAR(9) NOT NULL,
+  `aluno_rua` VARCHAR(255) NOT NULL,
+  `aluno_numero` VARCHAR(45) NOT NULL,
+  `aluno_complemento` VARCHAR(255) NOT NULL,
+  `aluno_cidade` VARCHAR(150) NOT NULL,
+  `aluno_estado` VARCHAR(150) NOT NULL,
+  `aluno_sexo` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`pkid_aluno`),
+  UNIQUE INDEX `aluno_cpf_UNIQUE` (`aluno_cpf` ASC))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+CREATE TABLE IF NOT EXISTS `bdmelodia`.`funcionario` (
+  `pkid_funcionario` INT NOT NULL AUTO_INCREMENT,
+  `funcionario_nome` VARCHAR(255) NOT NULL,
+  `funcionario_data_de_nascimento` VARCHAR(12) NOT NULL,
+  `funcionario_telefone` VARCHAR(45) NOT NULL,
+  `funcionario_cpf` VARCHAR(13) NOT NULL,
+  `funcionario_cep` VARCHAR(9) NOT NULL,
+  `funcionario_rua` VARCHAR(255) NOT NULL,
+  `funcionario_numero` VARCHAR(45) NOT NULL,
+  `funcionario_complemento` VARCHAR(255) NOT NULL,
+  `funcionario_cidade` VARCHAR(150) NOT NULL,
+  `funcionario_estado` VARCHAR(150) NOT NULL,
+  `funcionario_sexo` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`pkid_funcionario`),
+  UNIQUE INDEX `aluno_cpf_UNIQUE` (`funcionario_cpf` ASC))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
