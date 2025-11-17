@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo_madeira"
+    tools:context=".controller.AlterarEvento">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCriarVoltar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24.5dp"
+        android:layout_marginEnd="300dp"
+        android:background="@drawable/it_voltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        style="@style/molduracadastro"
+        android:layout_marginTop="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtNomeAlterar"
+        style="@style/campos"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Nome do evento"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/legenda"
+        android:layout_marginTop="10dp"
+        android:text="Alterar informações do evento"
+        android:textColor="@color/app_marrom"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <EditText
+        android:id="@+id/edtDrecricaoAlterar"
+        style="@style/campos"
+        android:layout_height="150dp"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="Descrição do evento"
+        android:inputType="textMultiLine"
+        android:maxLines="6"
+        android:minLines="4"
+        android:textColorHint="#945F3411"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/edtLocalAlterar" />
+
+    <EditText
+        android:id="@+id/edtDataAlterar"
+        style="@style/campos"
+        android:ems="10"
+        android:hint="Dia do evento"
+        android:inputType="number"
+        android:maxLength="10"
+        android:textColorHint="#945F3411"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/edtNomeAlterar" />
+
+    <EditText
+        android:id="@+id/edtHoraAlterar"
+        style="@style/campos"
+        android:ems="10"
+        android:hint="Horário do evento"
+        android:inputType="time"
+        android:maxLength="5"
+        android:textColorHint="#945F3411"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/edtDataAlterar" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnEventoAlterar"
+        style="@style/btn"
+        android:text="Alterar evento"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/edtDrecricaoAlterar" />
+
+    <EditText
+        android:id="@+id/edtLocalAlterar"
+        style="@style/campos"
+        android:ems="10"
+        android:hint="Local do evento"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/edtHoraAlterar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
